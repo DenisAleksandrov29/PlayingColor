@@ -52,6 +52,9 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KZP-4G-Yn3">
                                         <rect key="frame" x="-2" y="0.0" width="202" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="YzP-wv-4nl"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h59-YW-0Kf">
                                         <rect key="frame" x="-2" y="55" width="202" height="31"/>
@@ -75,6 +78,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tQv-mA-Jc6" secondAttribute="trailing" constant="38" id="w5r-lo-joC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="wED-BC-NlX" id="FhW-hr-AaL"/>
+                        <outlet property="blueSlider" destination="WJJ-5L-RtM" id="cg8-O1-f1c"/>
+                        <outlet property="colorView" destination="xbB-zf-lan" id="nvT-Hd-y8d"/>
+                        <outlet property="greenLabel" destination="2k9-iD-gNo" id="8fi-mh-CYc"/>
+                        <outlet property="greenSlider" destination="h59-YW-0Kf" id="B81-TB-1rF"/>
+                        <outlet property="redLabel" destination="s8r-wQ-Jeu" id="joV-ay-c5b"/>
+                        <outlet property="redSlider" destination="KZP-4G-Yn3" id="qE7-1J-cBE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
