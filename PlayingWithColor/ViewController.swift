@@ -15,43 +15,56 @@ final class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupView()
         setupSliders()
         updateColor()
+        
     }
     
-    func setupView() {
-        colorView.layer.cornerRadius = 20
-    }
-    
-    
-    func setupSliders() {
-            redSlider.minimumTrackTintColor = .red
-            greenSlider.minimumTrackTintColor = .green
-//            blueSlider.minimumTrackTintColor = .blue
-        }
-    
-    @IBAction func sliderValue(_ sender: UISlider) {
+    @IBAction func sliderValueRed(_ sender: UISlider) {
         updateColor()
     }
     
-    func updateColor() {
+    @IBAction func sliderValueGreen(_ sender: UISlider) {
+        updateColor()
+    }
+    
+    @IBAction func sliderValueBlue(_ sender: UISlider) {
+        updateColor()
+    }
+    
+    private func setupView() {
+        colorView.layer.cornerRadius = 20
+    }
+    
+    private func setupSliders() {
+        redSlider.minimumTrackTintColor = .red
+        greenSlider.minimumTrackTintColor = .green
+    }
+    
+    private func updateColor() {
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1.0
-        
         )
+        redLabel.text = String(format: "%.2f", redSlider.value)
+        greenLabel.text = String(format: "%.2f", greenSlider.value)
+        blueLabel.text = String(format: "%.2f", blueSlider.value)
     }
-    
 }
+
+        
+        
+
+    
+
 
